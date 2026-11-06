@@ -208,3 +208,15 @@ Exceptions:
 
 - `preserve_blank_lines=True` splits on every individual `\r` or `\n`, so a blank line stays. The same input `Line number one\n\nand Line three\n` → `Line Number One\n\nAnd Line Three\n`. Because `\r` and `\n` are separate breaks, `one\r\ntwo` → `One\n\nTwo`.
 - `normalise_space_characters=True` joins the word pieces with a single ordinary space. A tab becomes a space: `text\twith\ttabs` → `Text With Tabs`. Repeated spaces still produce empty pieces, so they remain: `many   spaces here` → `Many   Spaces Here`.
+
+
+
+## Final observations
+
+**1. Which rules did the agent get wrong most?**
+
+The most challenging rules involved small-word capitalization, mixed-case preservation, acronyms, hyphenated words, and punctuation handling.
+
+**2. What would you add to make the task harder?**
+
+I would add more hidden test cases involving Unicode characters, unusual punctuation, whitespace variations, and combinations of capitalization rules.
